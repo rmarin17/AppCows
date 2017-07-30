@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProCows</string>
+    <string name="fecha_cel">Fecha del Celo (Día/Mes/Año)</string>
+    <string name="fecha_prox">Próximo Celo</string>
+    <string name="fecha_parto">Posible Parto</string>
+    <string name="vac_nombre">Nombre de la Vaca</string>
+    <string name="fecha">(Día/Mes/Año)</string>
+    <string name="btn_save">Establecer Alarma</string>
+    <string name="btn_text_alarma">Alarmas</string>
+
+</resources>

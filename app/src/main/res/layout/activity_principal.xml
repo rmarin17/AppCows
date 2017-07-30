@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:stretchColumns="*"
+    tools:context="industries.marin.procows.Principal">
+
+    <FrameLayout>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/celos"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/mask"
+            />
+    </FrameLayout>
+
+    <TableLayout
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <TableRow
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/supersmall"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            >
+            <ImageView
+                android:layout_width="@dimen/principal_icon"
+                android:layout_height="@dimen/principal_icon"
+                android:src="@drawable/vaca"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                >
+                <EditText
+                    android:id="@+id/nombre"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/vac_nombre"
+                    android:textColorHint="@color/textBody"
+                    android:textColor="@color/textBody"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/supersmall"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            >
+            <LinearLayout
+                android:id="@+id/btnfecha"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+            >
+            <ImageView
+                android:layout_width="@dimen/principal_icon"
+                android:layout_height="@dimen/principal_icon"
+                android:src="@drawable/ic_calendar"
+                />
+             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fechacelo"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                >
+
+            <EditText
+                android:id="@+id/fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fecha_cel"
+                android:textColorHint="@color/textBody"
+                android:textColor="@color/textBody"
+                android:gravity="center"
+                android:singleLine="true"
+                android:enabled="false"
+                />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            >
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:layout_marginTop="@dimen/medium"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_prox"
+                android:textColor="@color/textTitle"
+                android:gravity="center"
+            />
+
+            <TextView
+                android:id="@+id/celo"
+                android:layout_marginTop="@dimen/medium"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/fecha"
+                android:textColorHint="@color/textBody"
+                android:textColor="@color/textBody"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_marginTop="@dimen/medium"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fecha_parto"
+                    android:textColor="@color/textTitle"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/parto"
+                    android:layout_marginTop="@dimen/medium"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fecha"
+                    android:textColorHint="@color/textBody"
+                    android:textColor="@color/textBody"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            >
+
+            <Button
+                android:id="@+id/guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar" />
+
+        </TableRow>
+
+        </TableLayout>
+
+
+    <TableRow
+        android:paddingBottom="@dimen/small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout>
+        <LinearLayout
+            android:id="@+id/btnAla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/icon_btn"
+                android:layout_height="@dimen/icon_btn"
+                android:src="@drawable/ic_btn_alarm"
+                />
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_text_alarma"
+                android:textColor="@color/txtBtn"
+                />
+        </LinearLayout>
+        </FrameLayout>
+    </TableRow>
+
+</TableLayout>
