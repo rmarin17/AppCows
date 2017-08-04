@@ -6,8 +6,6 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
@@ -17,9 +15,8 @@ import android.support.v4.app.NotificationCompat;
 import java.util.Calendar;
 import java.util.List;
 
-import industries.marin.procows.Models.Alarma;
+import industries.marin.procows.models.Alarma;
 import industries.marin.procows.db.AlarmaDao;
-import industries.marin.procows.db.DataBaseHelper;
 
 /**
  * Created by RicardoM on 23/06/2017.

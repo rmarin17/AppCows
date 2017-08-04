@@ -3,17 +3,11 @@ package industries.marin.procows;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -24,7 +18,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 import industries.marin.procows.db.AlarmaDao;
-import industries.marin.procows.Models.Alarma;
+import industries.marin.procows.models.Alarma;
 
 public class Principal extends AppCompatActivity implements View.OnClickListener {
 

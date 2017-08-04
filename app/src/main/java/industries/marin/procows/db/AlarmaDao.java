@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import industries.marin.procows.Models.Alarma;
+import industries.marin.procows.models.Alarma;
 
 /**
  * Created by RicardoM on 28/03/2017.

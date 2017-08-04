@@ -7,5 +7,10 @@
     <string name="fecha">(Día/Mes/Año)</string>
     <string name="btn_save">Establecer Alarma</string>
     <string name="btn_text_alarma">Alarmas</string>
+    <string name="btn_text_delete">Eliminar</string>
+    <string name="btn_text_eleminar">Eliminar</string>
+    <string name="detail_datecelo">Próximo Celo</string>
+    <string name="detail_parto">Estimación de Parto</string>
+    <string name="detail_hora">Hora de Alarma</string>
 
 </resources>

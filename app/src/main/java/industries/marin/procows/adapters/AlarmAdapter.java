@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import industries.marin.procows.Models.Alarma;
+import industries.marin.procows.models.Alarma;
 import industries.marin.procows.R;
 
 /**

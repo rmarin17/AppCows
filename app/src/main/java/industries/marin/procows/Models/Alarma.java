@@ -1,7 +1,4 @@
-package industries.marin.procows.Models;
-
-import java.sql.Time;
-import java.util.Date;
+package industries.marin.procows.models;
 
 /**
  * Created by RicardoM on 19/01/2017.
