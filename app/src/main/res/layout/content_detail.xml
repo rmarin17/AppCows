@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="alarm"
+            type="industries.marin.procows.models.Alarma"/>
+    </data>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_marginLeft="@dimen/medium"
+            android:layout_marginRight="@dimen/medium"
+            android:layout_marginTop="@dimen/small"
+            tools:text="Gourmet"
+            android:text="@{alarm.nombre}"
+            />
+
+        <RelativeLayout android:padding="@dimen/medium">
+
+            <ImageView
+                android:id="@+id/icon_celo"
+                style="@style/IconDetail"
+                android:layout_marginBottom="@dimen/medium"
+                android:src="@drawable/ic_date" />
+
+            <TextView
+                android:id="@+id/label_date_celo"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_celo"
+                android:layout_toRightOf="@id/icon_celo"
+                tools:text="17/03/1995"
+                android:text="@{alarm.fecha}"
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_date_celo"
+                android:layout_toRightOf="@id/icon_celo"
+                android:text="@string/detail_datecelo" />
+
+            <ImageView
+                android:id="@+id/icon_date_parto"
+                style="@style/IconDetail"
+                android:layout_below="@id/icon_celo"
+                android:layout_marginBottom="@dimen/medium"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/label_parto"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_date_parto"
+                android:layout_toRightOf="@id/icon_date_parto"
+                tools:text="17/09/1995"
+                android:text="@{alarm.parto}"
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_parto"
+                android:layout_toRightOf="@id/icon_date_parto"
+                android:text="@string/detail_parto" />
+
+            <ImageView
+                android:id="@+id/icon_time"
+                style="@style/IconDetail"
+                android:layout_below="@id/icon_date_parto"
+                android:src="@drawable/ic_clock" />
+
+            <TextView
+                android:id="@+id/label_star"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_time"
+                android:layout_toRightOf="@id/icon_time"
+                tools:text="9:10"
+                android:text='@{alarm.hora}'
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_star"
+                android:layout_toRightOf="@id/icon_time"
+                android:text="@string/detail_hora" />
+
+
+        </RelativeLayout>
+
+    </TableLayout>
+</layout>
