@@ -147,7 +147,7 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
                     a.setNombre(nombre);
                     a.setProcelo(fechapc);
                     a.setParto(fechap);
-                    a.setHora("9:10");
+                    a.setHora("7:10");
                     a.setFechaince(fechah);
                     a.setToro(toro);
                     dao.insert(a);
