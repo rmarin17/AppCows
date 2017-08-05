@@ -14,16 +14,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/id"
-            style="@style/TextAppearance.AppCompat.Caption"
-            android:layout_marginLeft="@dimen/medium"
-            android:layout_marginRight="@dimen/medium"
-            android:layout_marginTop="@dimen/small"
-            tools:text="Gourmet"
-            android:text='@{""+alarm.id}'
-
-            />
 
         <RelativeLayout android:padding="@dimen/medium">
 
