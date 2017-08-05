@@ -21,15 +21,6 @@
             android:background="@drawable/mask"
             />
 
-        <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textColor="#fff"
-            android:padding="@dimen/small"
-            tools:text="@string/titulo_app"
-            />
     </FrameLayout>
 
     <TableLayout
