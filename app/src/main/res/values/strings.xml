@@ -14,14 +14,12 @@
     <string name="detail_hora">Hora de Alarma</string>
 
 
-    <string name="detail_description">Descripcion</string>
-    <string name="ipsum">En la mayoria de las granjas o fincas ganaderas el proceso de reproducción es uno de los factores que determinan el exito o no de la actividad económica relacionada con la producción.
-Tanto en sistemas de producción de ganado para carne como en sistemas inclinados a la producción lechera o doble proposito, la reproducción animal juega un importante papel, los productores persiguen la obtencion del mayor numero de cría por año, con los mejores pesos al destete y menor número de abortos y vacas vacías, es decir, una mayor eficiencia reproductiva.
-Teoricamente una vaca debería producir una cría por año, esto depende de factores internos como la genética del animal y de factores externos como la nutrición, el manejo sanitario y el mismo manejo reproductivo.
-Las vacas presentan celo cada 21 días, son hembras poliestricas estacionales. Los machos serviran a las hembras solo durante el tiempo que el celo esté presente, esto es por una lapso de 2 a 4 días. En las vacas la gestacion dura 9 meses aproximadamente.</string>
+    <string name="empy">No se encuentran datos registrados</string>
+    <string name="detail_description">Descripción</string>
+    <string name="ipsum">En la mayoría de las granjas o fincas ganaderas el proceso de reproducción es uno de los factores que determinan el éxito o no de la actividad económica relacionada con la producción.\nTanto en sistemas de producción de ganado para carne como en sistemas inclinados a la producción lechera o doble propósito, la reproducción animal juega un importante papel, los productores persiguen la obtención del mayor número de cría por año, con los mejores pesos al destete y menor número de abortos y vacas vacías, es decir, una mayor eficiencia reproductiva. \nTeóricamente una vaca debería producir una cría por año, esto depende de factores internos como la genética del animal y de factores externos como la nutrición, el manejo sanitario y el mismo manejo reproductivo.\nLas vacas presentan celo cada 21 días, son hembras poliestricas estacionales. En las vacas la gestación dura 9 meses aproximadamente.</string>
     <string name="alert_title">Eliminar</string>
-    <string name="alert_msg">¿esta seguro que desea eliminarlo?</string>
+    <string name="alert_msg">¿Está seguro de eliminar este registro?</string>
     <string name="ok">Si</string>
-    <string name="cancel">No</string>
+    <string name="cancel">Cancelar</string>
 
 </resources>

@@ -17,13 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import industries.marin.procows.adapters.AlarmAdapterPro;
-import industries.marin.procows.adapters.AlarmAdapter;
 import industries.marin.procows.databinding.ActivityAlarmsBinding;
 import industries.marin.procows.db.AlarmaDao;
 import industries.marin.procows.models.Alarma;
 import industries.marin.procows.util.L;
 
-import static android.R.id.list;
 
 public class Alarms extends AppCompatActivity implements AlarmAdapterPro.OnAlarmListener {
 
@@ -72,7 +70,7 @@ public class Alarms extends AppCompatActivity implements AlarmAdapterPro.OnAlarm
             adapter.notifyDataSetChanged();
         }
         else {
-            Toast.makeText(this, "No hay datos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.empy, Toast.LENGTH_LONG).show();
         }
 
     }
