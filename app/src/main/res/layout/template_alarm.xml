@@ -40,7 +40,7 @@
                     android:layout_height="@dimen/template_img"
                     android:background="#333"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cowalarm"
+                    android:src="@drawable/listcows"
                     />
 
                 <ImageView

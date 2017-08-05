@@ -9,6 +9,6 @@
     <dimen name="small">10dp</dimen>
     <dimen name="supersmall">5dp</dimen>
     <dimen name="icon_btn">40dp</dimen>
-    <dimen name="template_img">180dp</dimen>
+    <dimen name="template_img">160dp</dimen>
     <dimen name="icon">25dp</dimen>
 </resources>
