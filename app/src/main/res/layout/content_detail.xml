@@ -15,12 +15,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/id"
             style="@style/TextAppearance.AppCompat.Caption"
             android:layout_marginLeft="@dimen/medium"
             android:layout_marginRight="@dimen/medium"
             android:layout_marginTop="@dimen/small"
             tools:text="Gourmet"
-            android:text="@{alarm.nombre}"
+            android:text='@{""+alarm.id}'
+
             />
 
         <RelativeLayout android:padding="@dimen/medium">
@@ -104,5 +106,24 @@
 
         </RelativeLayout>
 
+
+        <View
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_marginBottom="@dimen/small"
+            android:paddingLeft="@dimen/medium"
+            android:paddingRight="@dimen/medium"
+            android:paddingTop="@dimen/medium"
+            android:text="@string/detail_description" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/medium"
+            android:text="@string/ipsum"
+            />
     </TableLayout>
+
 </layout>

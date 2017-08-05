@@ -55,7 +55,7 @@
                     android:textColor="#fff"
                     android:padding="@dimen/small"
                     android:layout_alignBottom="@id/img"
-                    tools:text="Nombre Restaurante"
+                    tools:text="Nombre Vaca"
                     android:text="@{alar.nombre}"
                     />
 

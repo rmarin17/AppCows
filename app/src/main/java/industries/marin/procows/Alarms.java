@@ -3,12 +3,14 @@ package industries.marin.procows;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -42,6 +44,8 @@ public class Alarms extends AppCompatActivity implements AlarmAdapterPro.OnAlarm
         binding.recycler.setAdapter(adapter);
         binding.recycler.setLayoutManager(new LinearLayoutManager(this));
 
+        dao = new AlarmaDao(this);
+
         loadData();
     }
 
@@ -60,10 +64,16 @@ public class Alarms extends AppCompatActivity implements AlarmAdapterPro.OnAlarm
         hora_sistema = hora+":"+min;*/
 
         List<Alarma> list = dao.getAll();
-        for (Alarma a : list){
-            L.data.add(a);
+
+        if(list.size() > 0 ) {
+            for (Alarma a : list) {
+                L.data.add(a);
+            }
+            adapter.notifyDataSetChanged();
         }
-        adapter.notifyDataSetChanged();
+        else {
+            Toast.makeText(this, "No hay datos", Toast.LENGTH_LONG).show();
+        }
 
     }
 
@@ -76,6 +86,9 @@ public class Alarms extends AppCompatActivity implements AlarmAdapterPro.OnAlarm
 
         startActivity(intent);
     }
+
+
+
 
 
 //regionbad

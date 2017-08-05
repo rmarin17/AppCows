@@ -13,4 +13,8 @@
     <color name="iconlist">#333333</color>
     <color name="txtBtn">#666</color>
     <color name="itemBody">#9E9E9E</color>
+
+    <color name="divider">#BDBDBD</color>
+    <color name="alert">#F44336</color>
+
 </resources>

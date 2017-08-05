@@ -108,7 +108,6 @@
                     android:layout_centerVertical="true"
                     android:layout_alignRight="@id/imagen"
                     android:layout_marginRight="@dimen/small"
-                    app:setOnItemClickListener="@{onItemClick}"
                     >
 
                     <ImageView

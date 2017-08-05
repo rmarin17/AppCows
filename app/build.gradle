@@ -4,8 +4,8 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
 
-    dataBinding {
-        enabled = true;
+    dataBinding{
+        enabled = true
     }
 
     defaultConfig {

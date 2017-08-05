@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import industries.marin.procows.R;
 import industries.marin.procows.databinding.TemplateAlarmBinding;
+import industries.marin.procows.util.L;
 
 /**
  * Created by RicardoM on 04/08/2017.
@@ -23,8 +24,8 @@ public class AlarmAdapterPro extends RecyclerView.Adapter<AlarmAdapterPro.AlarmV
     LayoutInflater inflater;
     OnAlarmListener onAlarmListener;
 
-    public AlarmAdapterPro(LayoutInflater inflater, OnAlarmListener onRestauranteListener) {
-        this.onAlarmListener = onRestauranteListener;
+    public AlarmAdapterPro(LayoutInflater inflater, OnAlarmListener onAlarmListener) {
+        this.onAlarmListener = onAlarmListener;
         this.inflater = inflater;
     }
 
@@ -37,13 +38,13 @@ public class AlarmAdapterPro extends RecyclerView.Adapter<AlarmAdapterPro.AlarmV
 
     @Override
     public void onBindViewHolder(AlarmViewHolder holder, int position) {
-        holder.binding.setAlar(industries.marin.procows.util.L.data.get(position));
+        holder.binding.setAlar(L.data.get(position));
         holder.binding.setHandler(this);
     }
 
     @Override
     public int getItemCount() {
-        return industries.marin.procows.util.L.data.size();
+        return L.data.size();
     }
 
     public void onClickAlarm(View v){

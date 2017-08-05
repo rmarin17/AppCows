@@ -8,6 +8,10 @@
         <variable
             name="alar"
             type="industries.marin.procows.models.Alarma" />
+
+        <variable
+            name="handler"
+            type="industries.marin.procows.DetailAlarm" />
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -20,7 +24,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <include layout="@layout/content_detail"
-                app:rest="@{alar}" />
+                app:alarm="@{alar}" />
 
         </android.support.v4.widget.NestedScrollView>
 
@@ -46,7 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cowalarm"
+                    android:src="@drawable/fondo"
                     app:layout_collapseMode="parallax"
                     />
                 <android.support.v7.widget.Toolbar
@@ -60,7 +64,6 @@
         </android.support.design.widget.AppBarLayout>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/del"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fabSize="normal"
@@ -68,7 +71,7 @@
             app:layout_anchor="@id/appBar"
             app:layout_anchorGravity="bottom|right"
             android:layout_margin="@dimen/medium"
-            android:clickable="true"
+            android:onClick="@{()->handler.generateAlert()}"
             />
 
     </android.support.design.widget.CoordinatorLayout>
