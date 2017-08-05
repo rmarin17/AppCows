@@ -18,9 +18,35 @@
         <RelativeLayout android:padding="@dimen/medium">
 
             <ImageView
+                android:id="@+id/icon_ince"
+                style="@style/IconDetail"
+                android:layout_marginBottom="@dimen/medium"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/label_date_ince"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_ince"
+                android:layout_toRightOf="@id/icon_ince"
+                tools:text="17/03/1995"
+                android:text="@{alarm.fechaince}"
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_date_ince"
+                android:layout_toRightOf="@id/icon_ince"
+                android:text="@string/detail_datecelo" />
+
+            <ImageView
                 android:id="@+id/icon_celo"
                 style="@style/IconDetail"
                 android:layout_marginBottom="@dimen/medium"
+                android:layout_below="@id/icon_ince"
                 android:src="@drawable/ic_date" />
 
             <TextView
@@ -31,7 +57,7 @@
                 android:layout_alignTop="@id/icon_celo"
                 android:layout_toRightOf="@id/icon_celo"
                 tools:text="17/03/1995"
-                android:text="@{alarm.fecha}"
+                android:text="@{alarm.procelo}"
                 />
 
             <TextView
@@ -40,14 +66,40 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/label_date_celo"
                 android:layout_toRightOf="@id/icon_celo"
-                android:text="@string/detail_datecelo" />
+                android:text="@string/detail_dateprocelo" />
+
+            <ImageView
+                android:id="@+id/icon_toro"
+                style="@style/IconDetail"
+                android:layout_below="@id/icon_celo"
+                android:layout_marginBottom="@dimen/medium"
+                android:src="@drawable/toro" />
+
+            <TextView
+                android:id="@+id/label_toro"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_toro"
+                android:layout_toRightOf="@id/icon_toro"
+                tools:text="Nombre"
+                android:text="@{alarm.toro}"
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_toro"
+                android:layout_toRightOf="@id/icon_toro"
+                android:text="@string/detail_toro" />
 
             <ImageView
                 android:id="@+id/icon_date_parto"
                 style="@style/IconDetail"
-                android:layout_below="@id/icon_celo"
+                android:layout_below="@id/icon_toro"
                 android:layout_marginBottom="@dimen/medium"
-                android:src="@drawable/ic_calendar" />
+                android:src="@drawable/ic_date" />
 
             <TextView
                 android:id="@+id/label_parto"

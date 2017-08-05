@@ -22,9 +22,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
             db.execSQL(" CREATE TABLE alarma (_id INTEGER PRIMARY KEY AUTOINCREMENT"
                 +", nombre VARCHAR"
-                +", fecha DATE"
+                +", fechaince DATE"
                 +", hora TIME"
                 +", parto DATE"
+                +", tipoince VARCHAR"
+                +", procelo DATE"
+                +", toro VARCHAR"
                 +")"
             );
     }

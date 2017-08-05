@@ -6,7 +6,7 @@ package industries.marin.procows.models;
 
 public class Alarma {
     long id;
-    String nombre, fecha, hora, parto;
+    String nombre, fechaince, hora, parto, tipoince, procelo, toro;
 
     public long getId() {
         return id;
@@ -24,12 +24,12 @@ public class Alarma {
         this.nombre = nombre;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getFechaince() {
+        return fechaince;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setFechaince(String fechaince) {
+        this.fechaince = fechaince;
     }
 
     public String getHora() {
@@ -46,5 +46,29 @@ public class Alarma {
 
     public void setParto(String parto) {
         this.parto = parto;
+    }
+
+    public String getTipoince() {
+        return tipoince;
+    }
+
+    public void setTipoince(String tipoince) {
+        this.tipoince = tipoince;
+    }
+
+    public String getProcelo() {
+        return procelo;
+    }
+
+    public void setProcelo(String procelo) {
+        this.procelo = procelo;
+    }
+
+    public String getToro() {
+        return toro;
+    }
+
+    public void setToro(String toro) {
+        this.toro = toro;
     }
 }

@@ -11,21 +11,24 @@
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/celos"/>
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fondop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/mask"
+            />
+
         <TextView
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:textColor="#fff"
             android:padding="@dimen/small"
-            tools:text="Control de Celos"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@drawable/mask"
+            tools:text="@string/titulo_app"
             />
     </FrameLayout>
 
@@ -107,6 +110,38 @@
                 android:enabled="false"
                 />
             </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/supersmall"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            >
+            <ImageView
+                android:layout_width="@dimen/principal_icon"
+                android:layout_height="@dimen/principal_icon"
+                android:src="@drawable/toro"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                >
+                <EditText
+                    android:id="@+id/toro"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/toro_nombre"
+                    android:textColorHint="@color/textBody"
+                    android:textColor="@color/textBody"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
         </TableRow>
 
         <TableRow

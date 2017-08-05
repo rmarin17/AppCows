@@ -23,12 +23,12 @@ import industries.marin.procows.models.Alarma;
 public class Principal extends AppCompatActivity implements View.OnClickListener {
 
     LinearLayout btnfecha, btnala,fechacelo;
-    EditText fec,nom;
+    EditText fec,nom,tor;
     TextView celo,parto;
     AlarmaDao dao;
-    String nombre,fecha,hora,fechap;
+    String nombre,fechapc,hora,fechap, fechah, toro;
     Button guardar;
-    private  int dia,mes,ano,diac,mesc,anoc,hor,min,anop,diap,mesp;
+    private  int dia,mes,ano,diac,mesc,anoc,hor,min,anop,diap,mesp,diasel,messel,anosel;
 
     AlarmManager alarmManager;
     private static final int ALARM_REQUEST_CODE = 1;
@@ -43,6 +43,7 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
         btnala = (LinearLayout) findViewById(R.id.btnAla);
         fec = (EditText)findViewById(R.id.fecha);
         nom = (EditText)findViewById(R.id.nombre);
+        tor = (EditText)findViewById(R.id.toro);
         celo = (TextView) findViewById(R.id.celo);
         parto = (TextView) findViewById(R.id.parto);
 
@@ -138,20 +139,24 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.guardar:
 
-                if(nom.getText().toString().length() > 0 && fec.getText().toString().length() > 0) {
+                if(nom.getText().toString().length() > 0 && fec.getText().toString().length() > 0 && tor.getText().toString().length() > 0) {
 
                     nombre = nom.getText().toString();
+                    toro = tor.getText().toString();
                     Alarma a = new Alarma();
                     a.setNombre(nombre);
-                    a.setFecha(fecha);
+                    a.setProcelo(fechapc);
                     a.setParto(fechap);
                     a.setHora("9:10");
+                    a.setFechaince(fechah);
+                    a.setToro(toro);
                     dao.insert(a);
 
                     celo.setText("");
                     parto.setText("");
                     nom.setText("");
                     fec.setText("");
+                    tor.setText("");
 
                     // region alarma
                     /*AlarmManager manager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
@@ -179,7 +184,7 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
 
                 else {
 
-                    Toast.makeText(this, "Por favor complete los campos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Por favor complete todos los campos", Toast.LENGTH_LONG).show();
 
                 }
                 break;
@@ -202,10 +207,15 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
                         fec.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
                         Calendar sel = Calendar.getInstance();
                         Calendar part = Calendar.getInstance();
+                        Calendar hoy = Calendar.getInstance();
+                        hoy.set(year, monthOfYear, dayOfMonth);
                         sel.set(year, monthOfYear, dayOfMonth);
                         part.set(year, monthOfYear, dayOfMonth);
                         part.add(Calendar.DATE, 283);
                         sel.add(Calendar.DATE, 21);
+                        anosel = sel.get(Calendar.YEAR);
+                        messel = sel.get(Calendar.MONTH);
+                        diasel = sel.get(Calendar.DAY_OF_MONTH);
                         anoc = sel.get(Calendar.YEAR);
                         mesc = sel.get(Calendar.MONTH);
                         diac = sel.get(Calendar.DAY_OF_MONTH);
@@ -214,8 +224,9 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
                         diap = part.get(Calendar.DAY_OF_MONTH);
                         celo.setText(diac + "/" + (mesc + 1) + "/" + anoc);
                         parto.setText(diap + "/" + (mesp + 1) + "/" + anop);
-                        fecha = diac + "/" + (mesc + 1) + "/" + anoc;
+                        fechapc = diac + "/" + (mesc + 1) + "/" + anoc;
                         fechap = diap + "/" + (mesp + 1) + "/" + anop;
+                        fechah = diasel +"/"+ (messel+1)+"/"+ anosel;
                         hora = hor+":"+min;
                     }
                 }, ano, mes, dia);

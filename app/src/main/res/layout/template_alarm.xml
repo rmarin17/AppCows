@@ -74,7 +74,7 @@
                     android:layout_toRightOf="@id/icon_call"
                     android:layout_alignBottom="@id/icon_call"
                     tools:text="17/03/2017"
-                    android:text="@{alar.fecha}"
+                    android:text="@{alar.fechaince}"
                     />
 
                 <ImageView
